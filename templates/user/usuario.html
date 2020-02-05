@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Usuários</h3>
+    {% for u in users %}
+
+    <div>{{u.email}}</div> 
+   <div>{{u.created_at}}</div> 
+    {% endfor %}
+   
+</body>
+</html>
