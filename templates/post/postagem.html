@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    #card{
+        height: fit-content;
+        width: 500px;
+        border: solid black 1px;
+    }
+    
+    </style>
+</head>
+<body>
+    <h3>Postagens</h3>
+
+    {% for p in posts %}
+
+<div id = "card">
+    <div>Titulo da postagem: {{p.titulo}}</div> 
+    <br>
+    <div>Conteúdo: {{p.content}}</div> 
+    <br>
+    <div>Data de criação :{{p.created_at}}</div> 
+ <div>Autor :{{p.autor}}</div> 
+</div>
+
+<br>
+<br>
+    
+
+    {% endfor %}
+    
+</body>
+</html>
