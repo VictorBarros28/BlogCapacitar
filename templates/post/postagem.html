@@ -9,9 +9,16 @@
     <style>
     #card{
         height: fit-content;
+        width: fit-content;
         width: 500px;
         border: solid black 1px;
     }
+
+    .foto{
+        height: 90%;
+        width: 90%;
+    }
+
     
     </style>
 </head>
@@ -19,21 +26,27 @@
     <h3>Postagens</h3>
 
     {% for p in posts %}
-
+  
 <div id = "card">
     <div>Titulo da postagem: {{p.titulo}}</div> 
+    <br>
+    <img class = "foto" style = "" src= " {{p.img.url}}"></img>
     <br>
     <div>Conteúdo: {{p.content}}</div> 
     <br>
     <div>Data de criação :{{p.created_at}}</div> 
  <div>Autor :{{p.autor}}</div> 
+ <a href="http://localhost:8000/postagens/{{p.id}}/apagar"> <button> Deletar </button> </a>
 </div>
 
-<br>
-<br>
-    
 
-    {% endfor %}
+<br>
+<br>
+     {% endfor %}
+
+<br>
+
+<a href= "{% url 'post:criar_postagem' %}"> <button> Criar Postagem </button></a>
     
 </body>
 </html>
