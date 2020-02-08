@@ -30,13 +30,14 @@
 <div id = "card">
     <div>Titulo da postagem: {{p.titulo}}</div> 
     <br>
-    <img class = "foto" style = "" src= " {{p.img.url}}"></img>
+    <img class = "foto" src= " {{p.img.url}}"></img>
     <br>
     <div>Conteúdo: {{p.content}}</div> 
     <br>
     <div>Data de criação :{{p.created_at}}</div> 
  <div>Autor :{{p.autor}}</div> 
  <a href="http://localhost:8000/postagens/{{p.id}}/apagar"> <button> Deletar </button> </a>
+ <a href="http://localhost:8000/postagens/{{p.id}}/editar"> <button> Editar </button> </a>
 </div>
 
 

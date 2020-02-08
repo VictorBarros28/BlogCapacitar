@@ -12,6 +12,8 @@
 
     <div>{{u.email}}</div> 
    <div>{{u.created_at}}</div> 
+   <a href="http://localhost:8000/usuarios/{{u.id}}/apagar"> <button> Deletar </button> </a>
+   <a href="http://localhost:8000/usuarios/{{u.id}}/editar"> <button> editar </button> </a>
     {% endfor %}
    
 </body>
