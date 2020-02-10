@@ -23,6 +23,20 @@
     </style>
 </head>
 <body>
+
+
+<div id = "navbar">
+    {% if not request.user.is_authenticated %}
+    <ul>
+   <li> <a href = "{% url 'user:logar_usuario' %}">login</a> </li>
+   <li> <a href = "{% url 'user:criar_usuario' %}">Cadastrar</a> </li>
+    {% else %}
+   <li> Olá, <a href = "{% url 'user:detalhar_usuario' request.user.id %}"> {{request.user.username}}</a> </li>
+   <li> <a href = "{% url 'user:deslogar_usuario' %}">logout </a> </li>
+</ul>
+    {% endif %}
+</div>
+
     <h3>Postagens</h3>
 
     {% for p in posts %}

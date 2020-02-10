@@ -4,9 +4,10 @@ from user.models import User
 class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     content = models.TextField(default="")
-    autor = models.ForeignKey(User, on_delete = models.CASCADE, verbose_name='autor')
+    autor = models.ForeignKey(User, on_delete = models.CASCADE, verbose_name='autor', related_name = 'posts')
     titulo = models.CharField(max_length=180)
     img = models.ImageField(upload_to='post/')
+
 
     def __str__(self):
         return f' Titulo : {self.titulo} | ID = {self.id} |Outros campos '

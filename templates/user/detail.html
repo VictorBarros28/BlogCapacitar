@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalhes</title>
+</head>
+<body>
+
+    <style>
+        #post{
+            height: fit-content;
+            width: 500px;
+        }
+    </style>
+    <div id= "editar">
+        <h3>Detalhar usuario</h3>
+
+    <div>{{User.email}}</div> 
+    <div>{{User.username}}</div>
+   <div>{{User.created_at}}</div> 
+   <br>
+   <br>
+   
+    <div id = post> {% for posts in User.posts.all %}
+        <a>{{posts.titulo}}</a>
+        <br>
+        <a>{{posts.content}}</a>
+        <br>
+        <br>
+    {% endfor %}
+    </div>
+    
+    </div>
+</body>
+</html>
